@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Like Movie - Download App</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    body {
+      background: #09090b;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #ffffff;
+      padding-bottom: 30px;
+    }
+
+    /* Top Red Header Bar */
+    .top-bar {
+      width: 100%;
+      background: linear-gradient(180deg, #b3090e 0%, #750608 100%);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    }
+    .app-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 0 14px rgba(0, 212, 255, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .app-title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+
+    /* Card Container */
+    .content-wrap {
+      width: 90%;
+      max-width: 380px;
+      margin-top: 22px;
+    }
+    .poster-container {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #272733;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.9);
+    }
+    .poster-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .gradient-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(9,9,11,0.05) 0%, rgba(9,9,11,0.7) 60%, #09090b 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    .headline {
+      font-size: 27px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      color: #ffffff;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.9);
+    }
+    .tagline {
+      font-size: 13px;
+      font-weight: 500;
+      color: #d1d5db;
+      letter-spacing: 0.3px;
+    }
+
+    /* Glowing Download Button */
+    .download-section {
+      width: 100%;
+      margin-top: 22px;
+    }
+    .btn-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 16px 20px;
+      background: linear-gradient(180deg, #ff3b30 0%, #d81d13 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 35px;
+      box-shadow: 0 8px 25px rgba(216, 29, 19, 0.55);
+      font-size: 17px;
+      font-weight: 800;
+      transition: transform 0.15s ease;
+    }
+    .btn-download:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header with Neon Logo on the left -->
+  <div class="top-bar">
+    <img src="logo.png" alt="App Logo" class="app-icon" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3658/3658959.png'">
+    <span class="app-title">LIKE MOVIE</span>
+  </div>
+
+  <div class="content-wrap">
+    <!-- Center Poster Banner -->
+    <div class="poster-container">
+      <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1000&auto=format&fit=crop" alt="Blockbuster Poster" class="poster-img">
+      <div class="gradient-overlay">
+        <h1 class="headline">Watch<br>Unlimited<br>Movies</h1>
+        <p class="tagline">Fast Streaming • HD Quality • Free Forever</p>
+      </div>
+    </div>
+
+    <!-- Direct Download Button -->
+    <div class="download-section">
+      <a href="LikeMovie_app.apk" class="btn-download" download>
+        <span>📥 Download Android App (27.5 MB)</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Auto Download Prompt Script -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const link = document.createElement('a');
+        link.href = 'LikeMovie_app.apk';
+        link.download = 'LikeMovie_app.apk';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>
+
