@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Like Movie - Download App</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+    }
     body {
       background: #09090b;
       min-height: 100vh;
@@ -13,10 +18,10 @@
       flex-direction: column;
       align-items: center;
       color: #ffffff;
-      padding-bottom: 30px;
+      padding-bottom: 35px;
     }
 
-    /* Top Red Header Bar */
+    /* Top Red Header */
     .top-bar {
       width: 100%;
       background: linear-gradient(180deg, #b3090e 0%, #750608 100%);
@@ -36,15 +41,15 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
     .app-title {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 900;
       letter-spacing: 2px;
       color: #ffffff;
       text-transform: uppercase;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
     }
 
-    /* Card Container */
+    /* Cinematic Center Poster */
     .content-wrap {
       width: 90%;
       max-width: 380px;
@@ -77,12 +82,12 @@
       text-align: center;
     }
     .headline {
-      font-size: 27px;
+      font-size: 28px;
       font-weight: 900;
       line-height: 1.2;
       margin-bottom: 8px;
       color: #ffffff;
-      text-shadow: 0 3px 12px rgba(0,0,0,0.9);
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
     }
     .tagline {
       font-size: 13px;
@@ -91,7 +96,7 @@
       letter-spacing: 0.3px;
     }
 
-    /* Glowing Download Button */
+    /* Red Glowing Download Button */
     .download-section {
       width: 100%;
       margin-top: 22px;
@@ -119,44 +124,43 @@
 </head>
 <body>
 
-  <!-- Top Header with Neon Logo on the left -->
+  <!-- Top Red Header Bar with Neon Logo -->
   <div class="top-bar">
-    <img src="logo.png" alt="App Logo" class="app-icon" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3658/3658959.png'">
+    <img src="1000271596-removebg-preview.png" alt="App Logo" class="app-icon" onerror="this.src='logo.png'">
     <span class="app-title">LIKE MOVIE</span>
   </div>
 
   <div class="content-wrap">
     <!-- Center Poster Banner -->
     <div class="poster-container">
-      <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1000&auto=format&fit=crop" alt="Blockbuster Poster" class="poster-img">
+      <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1000&auto=format&fit=crop" alt="Movies Poster" class="poster-img">
       <div class="gradient-overlay">
         <h1 class="headline">Watch<br>Unlimited<br>Movies</h1>
         <p class="tagline">Fast Streaming • HD Quality • Free Forever</p>
       </div>
     </div>
 
-    <!-- Direct Download Button -->
+    <!-- Manual Download Button -->
     <div class="download-section">
-      <a href="LikeMovie_app.apk" class="btn-download" download>
+      <a href="https://github.com/RameshM1415/likemovie/releases/download/v1.0/LikeMovie_app.apk" class="btn-download" download>
         <span>📥 Download Android App (27.5 MB)</span>
       </a>
     </div>
   </div>
 
-  <!-- Auto Download Prompt Script -->
+  <!-- Auto-download trigger after 2.5 seconds (so user sees full page first) -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         const link = document.createElement('a');
-        link.href = 'LikeMovie_app.apk';
+        link.href = 'https://github.com/RameshM1415/likemovie/releases/download/v1.0/LikeMovie_app.apk';
         link.download = 'LikeMovie_app.apk';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-      }, 1000);
+      }, 2500);
     });
   </script>
 
 </body>
 </html>
-
