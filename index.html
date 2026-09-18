@@ -124,9 +124,9 @@
 </head>
 <body>
 
-  <!-- Top Red Header Bar with Neon Logo -->
+  <!-- Top Red Header Bar with New Neon Logo -->
   <div class="top-bar">
-    <img src="1000271596-removebg-preview.png" alt="App Logo" class="app-icon" onerror="this.src='logo.png'">
+    <img src="app_logo.png" alt="App Logo" class="app-icon">
     <span class="app-title">LIKE MOVIE</span>
   </div>
 
@@ -148,7 +148,7 @@
     </div>
   </div>
 
-  <!-- Auto-download trigger after 2.5 seconds (so user sees full page first) -->
+  <!-- Auto-download trigger with 3s delay -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
@@ -158,7 +158,7 @@
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-      }, 2500);
+      }, 3000);
     });
   </script>
 
